@@ -1,0 +1,136 @@
+.smf-admin-wrap .smf-admin-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.smf-admin-wrap .smf-admin-actions code {
+    padding: 7px 9px;
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    word-break: break-all;
+}
+
+.smf-transactions-table code {
+    font-size: 11px;
+    word-break: break-all;
+}
+
+.smf-status {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: #f0f0f1;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.smf-status-paid { background: #edfaef; color: #116329; }
+.smf-status-failed { background: #fcf0f1; color: #8a2424; }
+.smf-status-pending,
+.smf-status-processing { background: #fff8e5; color: #7a4b00; }
+
+#smf-test-result.smf-test-ok { color: #116329; font-weight: 600; }
+#smf-test-result.smf-test-error { color: #b32d2e; font-weight: 600; }
+
+.smf-color-field {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.smf-color-field .smf-color-picker {
+    width: 42px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.smf-color-field .smf-color-text {
+    width: 7.5em;
+    max-width: 100%;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Gateway settings tabs */
+.smf-gateway-settings {
+    max-width: 960px;
+}
+
+.smf-gateway-settings .smf-gateway-version {
+    display: inline-block;
+    margin-inline-start: 8px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #f0f0f1;
+    color: #50575e;
+    font-size: 12px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.smf-gateway-settings .smf-settings-tabs {
+    margin: 16px 0 0;
+}
+
+.smf-gateway-settings .smf-tab-panel {
+    display: none;
+    margin-top: 16px;
+    padding: 4px 0 8px;
+}
+
+.smf-gateway-settings .smf-tab-panel.is-active {
+    display: block;
+}
+
+.smf-info-card {
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 0 0 14px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.smf-info-card h3 {
+    margin: 0 0 10px;
+    font-size: 15px;
+}
+
+.smf-info-card p {
+    margin: 0 0 10px;
+    line-height: 1.55;
+}
+
+.smf-info-card p:last-child {
+    margin-bottom: 0;
+}
+
+.smf-info-list,
+.smf-info-steps {
+    margin: 0 0 8px;
+    padding-inline-start: 1.25em;
+    line-height: 1.6;
+}
+
+.smf-info-list li,
+.smf-info-steps li {
+    margin: 0 0 6px;
+}
+
+.smf-copy-code {
+    display: inline-block;
+    max-width: 100%;
+    padding: 8px 10px;
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    word-break: break-all;
+}

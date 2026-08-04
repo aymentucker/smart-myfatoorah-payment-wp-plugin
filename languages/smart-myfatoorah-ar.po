@@ -1,0 +1,937 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart MyFatoorah Gateway 1.0.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-03 09:40+0300\n"
+"PO-Revision-Date: 2026-08-03 09:40+0300\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Domain: smart-myfatoorah\n"
+
+msgid "Pay securely through MyFatoorah. We automatically recommend QPay for Qatar and card payment for other countries."
+msgstr "ادفع بأمان عبر ماي فاتورة. نوصي تلقائيًا بـ QPay داخل قطر والدفع بالبطاقة للدول الأخرى."
+
+msgid "Smart MyFatoorah"
+msgstr "ماي فاتورة الذكية"
+
+msgid "Smart geographic routing: QPay for Qatar customers and card payment for international customers, with secure MyFatoorah callbacks and webhooks."
+msgstr "توجيه جغرافي ذكي: QPay لعملاء قطر والدفع بالبطاقة للعملاء الدوليين، مع تحقق آمن عبر Callback وWebhook من ماي فاتورة."
+
+msgid "Enable/Disable"
+msgstr "تفعيل/إيقاف"
+
+msgid "Enable Smart MyFatoorah Gateway"
+msgstr "تفعيل بوابة ماي فاتورة الذكية"
+
+msgid "Checkout title"
+msgstr "عنوان صفحة الدفع"
+
+msgid "Secure payment"
+msgstr "دفع آمن"
+
+msgid "Title shown to customers at checkout."
+msgstr "العنوان الذي يظهر للعملاء في صفحة إتمام الطلب."
+
+msgid "Checkout description"
+msgstr "وصف صفحة الدفع"
+
+msgid "MyFatoorah connection"
+msgstr "اتصال ماي فاتورة"
+
+msgid "Test mode"
+msgstr "وضع الاختبار"
+
+msgid "Use MyFatoorah sandbox"
+msgstr "استخدام بيئة الاختبار (Sandbox) لماي فاتورة"
+
+msgid "Merchant country"
+msgstr "دولة التاجر"
+
+msgid "Qatar"
+msgstr "قطر"
+
+msgid "Kuwait"
+msgstr "الكويت"
+
+msgid "Saudi Arabia"
+msgstr "السعودية"
+
+msgid "United Arab Emirates"
+msgstr "الإمارات العربية المتحدة"
+
+msgid "Bahrain"
+msgstr "البحرين"
+
+msgid "Oman"
+msgstr "عُمان"
+
+msgid "Jordan"
+msgstr "الأردن"
+
+msgid "Egypt"
+msgstr "مصر"
+
+msgid "For a Qatar MyFatoorah account choose Qatar. Each MyFatoorah country may use a different live API host/token."
+msgstr "لحساب ماي فاتورة في قطر اختر قطر. قد تستخدم كل دولة مضيف API/رمزًا مختلفًا للوضع الحي."
+
+msgid "API token"
+msgstr "رمز API"
+
+msgid "Create an API key in your MyFatoorah portal. Never share this token publicly."
+msgstr "أنشئ مفتاح API من بوابة ماي فاتورة. لا تشارك هذا الرمز علنًا."
+
+msgid "Connection test"
+msgstr "اختبار الاتصال"
+
+msgid "Smart payment routing"
+msgstr "التوجيه الذكي للدفع"
+
+msgid "The gateway uses billing country first, then shipping country, then WooCommerce geolocation. Qatar defaults to QPay; other countries default to bank card."
+msgstr "تستخدم البوابة دولة الفوترة أولًا ثم الشحن ثم تحديد الموقع في ووكومرس. قطر تستخدم QPay افتراضيًا، وباقي الدول البطاقة البنكية."
+
+msgid "Customer override"
+msgstr "اختيار العميل"
+
+msgid "Allow customers to change the recommended method"
+msgstr "السماح للعملاء بتغيير الطريقة الموصى بها"
+
+msgid "Remember preference"
+msgstr "تذكّر التفضيل"
+
+msgid "Remember the last successful method for logged-in customers"
+msgstr "تذكّر آخر طريقة ناجحة للعملاء المسجّلين"
+
+msgid "QPay fallback"
+msgstr "الرجوع من QPay"
+
+msgid "If QPay is not enabled/available, automatically fall back to card payment"
+msgstr "إذا لم يكن QPay مفعّلًا/متاحًا، انتقل تلقائيًا للدفع بالبطاقة"
+
+msgid "Local method fallback"
+msgstr "الرجوع من الطريقة المحلية"
+
+msgid "If a local method (QPay/KNET/Benefit/Mada/…) fails, automatically fall back to card payment"
+msgstr "إذا فشلت طريقة محلية (QPay / KNET / Benefit / Mada …)، انتقل تلقائيًا للدفع بالبطاقة"
+
+msgid "Recommended. Prevents hard checkout errors when a regional method is temporarily unavailable."
+msgstr "موصى به. يمنع أخطاء الدفع الحرجة عندما تكون طريقة إقليمية غير متاحة مؤقتًا."
+
+msgid "Wallet overrides"
+msgstr "خيارات المحفظة"
+
+msgid "Also allow Apple Pay and Google Pay as manual choices"
+msgstr "السماح أيضًا بـ Apple Pay و Google Pay كخيارات يدوية"
+
+msgid "Checkout route display"
+msgstr "عرض طرق الدفع"
+
+msgid "Logos (payment brand images)"
+msgstr "شعارات (صور العلامات التجارية)"
+
+msgid "Text labels only"
+msgstr "نصوص فقط"
+
+msgid "Choose whether payment route options show brand logos or text labels at checkout."
+msgstr "اختر ما إذا كانت خيارات الدفع تظهر كشعارات أو كنصوص في صفحة الدفع."
+
+msgid "QPay label"
+msgstr "تسمية QPay"
+
+msgid "QPay — Qatar debit cards"
+msgstr "QPay — بطاقات الخصم القطرية"
+
+msgid "Card label"
+msgstr "تسمية البطاقة"
+
+msgid "Visa / Mastercard"
+msgstr "فيزا / ماستركارد"
+
+msgid "Webhook & reliability"
+msgstr "Webhook والموثوقية"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Process MyFatoorah Webhook V2 payment and refund status events"
+msgstr "معالجة أحداث حالة الدفع والاسترجاع عبر Webhook V2 من ماي فاتورة"
+
+msgid "Webhook endpoint"
+msgstr "رابط Webhook"
+
+msgid "Webhook secret"
+msgstr "سر Webhook"
+
+msgid "Webhook Secret Key"
+msgstr "مفتاح Webhook السري"
+
+msgid "Copy this link to your MyFatoorah Account. After that, Copy your Webhook Secret Key from MyFatoorah Account in the above field."
+msgstr "انسخ هذا الرابط إلى حساب ماي فاتورة. بعد ذلك، انسخ مفتاح Webhook السري من حساب ماي فاتورة والصقه في الحقل أعلاه."
+
+msgid "Use the secure key configured in MyFatoorah Integration Settings → Webhook Settings (Webhook V2)."
+msgstr "استخدم المفتاح الآمن المضبوط في إعدادات التكامل لماي فاتورة ← إعدادات Webhook (Webhook V2)."
+
+msgid "Automatic reconciliation"
+msgstr "المصالحة التلقائية"
+
+msgid "Re-check pending payments every 15 minutes for up to 24 hours"
+msgstr "إعادة التحقق من المدفوعات المعلقة كل 15 دقيقة لمدة تصل إلى 24 ساعة"
+
+msgid "Debug log"
+msgstr "سجل التصحيح"
+
+msgid "Write sanitized MyFatoorah logs to WooCommerce logs"
+msgstr "كتابة سجلات ماي فاتورة المنظّفة في سجلات ووكومرس"
+
+msgid "API tokens and sensitive card fields are never written by this plugin."
+msgstr "لا تكتب هذه الإضافة رموز API أو حقول البطاقات الحساسة في السجلات."
+
+msgid "Refunds"
+msgstr "الاسترجاع"
+
+msgid "WooCommerce refunds"
+msgstr "استرجاع ووكومرس"
+
+msgid "Allow refund requests from WooCommerce orders"
+msgstr "السماح بطلبات الاسترجاع من طلبات ووكومرس"
+
+msgid "Refunds are submitted to MyFatoorah first. WooCommerce updates the order when the REFUND_STATUS_CHANGED webhook confirms the refund (finance review may apply)."
+msgstr "يُرسل الاسترجاع إلى ماي فاتورة أولًا. يحدّث ووكومرس الطلب عند تأكيد Webhook لحدث REFUND_STATUS_CHANGED (قد تنطبق مراجعة مالية)."
+
+msgid "Recommended"
+msgstr "موصى به"
+
+msgid "Based on your country, QPay is pre-selected. You can choose another method below."
+msgstr "حسب دولتك تم تحديد QPay مسبقًا. يمكنك اختيار طريقة أخرى أدناه."
+
+msgid "Based on your country, card payment is pre-selected. You can choose another method below."
+msgstr "حسب دولتك تم تحديد الدفع بالبطاقة مسبقًا. يمكنك اختيار طريقة أخرى أدناه."
+
+msgid "Payment method"
+msgstr "طريقة الدفع"
+
+msgid "Best for Qatar-issued debit cards."
+msgstr "الأنسب لبطاقات الخصم الصادرة من قطر."
+
+msgid "For credit cards and international bank cards."
+msgstr "لبطاقات الائتمان والبطاقات البنكية الدولية."
+
+msgid "Apple Pay"
+msgstr "Apple Pay"
+
+msgid "Google Pay"
+msgstr "Google Pay"
+
+msgid "The best payment method for your country will be used automatically."
+msgstr "سيتم استخدام أفضل طريقة دفع لدولتك تلقائيًا."
+
+msgid "Unable to create the payment order."
+msgstr "تعذّر إنشاء طلب الدفع."
+
+msgid "QPay routing was unavailable (%s). Falling back to card."
+msgstr "توجيه QPay غير متاح (%s). سيتم الرجوع للدفع بالبطاقة."
+
+msgid "Payment could not be started: %s"
+msgstr "تعذّر بدء الدفع: %s"
+
+msgid "MyFatoorah payment initiated. Route: %1$s. Invoice ID: %2$s."
+msgstr "تم بدء دفع ماي فاتورة. المسار: %1$s. رقم الفاتورة: %2$s."
+
+msgid "Order not found."
+msgstr "الطلب غير موجود."
+
+msgid "MyFatoorah payment ID is missing from this order."
+msgstr "معرّف دفع ماي فاتورة غير موجود في هذا الطلب."
+
+msgid "MyFatoorah refund request submitted for %1$s. Reference: %2$s. Final settlement may require MyFatoorah finance review."
+msgstr "تم إرسال طلب استرجاع ماي فاتورة بمبلغ %1$s. المرجع: %2$s. قد تتطلب التسوية النهائية مراجعة مالية من ماي فاتورة."
+
+msgid "Add this exact URL in MyFatoorah Portal → Integration Settings → Webhook Settings and select Webhook V2 / PAYMENT_STATUS_CHANGED."
+msgstr "أضف هذا الرابط حرفيًا في بوابة ماي فاتورة ← إعدادات التكامل ← إعدادات Webhook واختر Webhook V2 / PAYMENT_STATUS_CHANGED."
+
+msgid "Test MyFatoorah connection"
+msgstr "اختبار اتصال ماي فاتورة"
+
+msgid "Save settings first. The test uses InitiatePayment only; it does not charge a card."
+msgstr "احفظ الإعدادات أولًا. يستخدم الاختبار InitiatePayment فقط ولا يخصم من أي بطاقة."
+
+msgid "Every 15 minutes (Smart MyFatoorah)"
+msgstr "كل 15 دقيقة (ماي فاتورة الذكية)"
+
+msgid "Invalid payment details."
+msgstr "تفاصيل الدفع غير صالحة."
+
+msgid "MyFatoorah verification failed: %s"
+msgstr "فشل التحقق من ماي فاتورة: %s"
+
+msgid "MyFatoorah payment confirmed via %1$s. Payment ID: %2$s"
+msgstr "تم تأكيد دفع ماي فاتورة عبر %1$s. معرّف الدفع: %2$s"
+
+msgid "gateway"
+msgstr "البوابة"
+
+msgid "Invoice ID does not match the WooCommerce order."
+msgstr "رقم الفاتورة لا يطابق طلب ووكومرس."
+
+msgid "Customer reference does not match the WooCommerce order."
+msgstr "مرجع العميل لا يطابق طلب ووكومرس."
+
+msgid "Paid amount mismatch. Expected %1$s, received %2$s."
+msgstr "عدم تطابق المبلغ المدفوع. المتوقع %1$s والمستلم %2$s."
+
+msgid "Payment currency mismatch. Expected %1$s, received %2$s."
+msgstr "عدم تطابق عملة الدفع. المتوقعة %1$s والمستلمة %2$s."
+
+msgid "MyFatoorah payment failed (%s)."
+msgstr "فشل دفع ماي فاتورة (%s)."
+
+msgid "MyFatoorah webhook received, but verification failed: %s"
+msgstr "تم استلام Webhook من ماي فاتورة لكن فشل التحقق: %s"
+
+msgid "MyFatoorah Transactions"
+msgstr "معاملات ماي فاتورة"
+
+msgid "Testing…"
+msgstr "جاري الاختبار…"
+
+msgid "Permission denied."
+msgstr "غير مسموح."
+
+msgid "Connected. QPay: %1$s · Card: %2$s · Enabled methods: %3$s"
+msgstr "تم الاتصال. QPay: %1$s · البطاقة: %2$s · الطرق المفعّلة: %3$s"
+
+msgid "Yes"
+msgstr "نعم"
+
+msgid "No"
+msgstr "لا"
+
+msgid "Settings"
+msgstr "الإعدادات"
+
+msgid "A local operational log of payment attempts. No full card numbers, CVV values or OTP codes are stored."
+msgstr "سجل تشغيلي محلي لمحاولات الدفع. لا يتم تخزين أرقام البطاقات الكاملة أو CVV أو رموز OTP."
+
+msgid "Gateway settings"
+msgstr "إعدادات البوابة"
+
+msgid "Order"
+msgstr "الطلب"
+
+msgid "Route"
+msgstr "المسار"
+
+msgid "Amount"
+msgstr "المبلغ"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Invoice"
+msgstr "الفاتورة"
+
+msgid "Payment ID"
+msgstr "معرّف الدفع"
+
+msgid "Error"
+msgstr "خطأ"
+
+msgid "Updated"
+msgstr "آخر تحديث"
+
+msgid "No payment attempts recorded yet."
+msgstr "لا توجد محاولات دفع مسجّلة بعد."
+
+msgid "MyFatoorah returned no enabled payment methods."
+msgstr "لم تُرجع ماي فاتورة أي طرق دفع مفعّلة."
+
+msgid "QPay is not enabled on this MyFatoorah account. Enable Qatar Debit Cards / QPay in MyFatoorah, or allow card fallback."
+msgstr "QPay غير مفعّل في حساب ماي فاتورة هذا. فعّل بطاقات الخصم القطرية / QPay في ماي فاتورة، أو اسمح بالرجوع للبطاقة."
+
+msgid "MyFatoorah returned an incomplete QPay response."
+msgstr "أرجعت ماي فاتورة استجابة QPay غير مكتملة."
+
+msgid "MyFatoorah returned an incomplete payment response."
+msgstr "أرجعت ماي فاتورة استجابة دفع غير مكتملة."
+
+msgid "Missing MyFatoorah payment ID."
+msgstr "معرّف دفع ماي فاتورة مفقود."
+
+msgid "MyFatoorah API token is not configured."
+msgstr "رمز API لماي فاتورة غير مضبوط."
+
+msgid "MyFatoorah returned an invalid response."
+msgstr "أرجعت ماي فاتورة استجابة غير صالحة."
+
+msgid "MyFatoorah API request failed (HTTP %d)."
+msgstr "فشل طلب API لماي فاتورة (HTTP %d)."
+
+msgid "Customer"
+msgstr "عميل"
+
+msgid "Smart MyFatoorah Gateway requires WooCommerce to be installed and active."
+msgstr "تتطلب بوابة ماي فاتورة الذكية تثبيت وتفعيل ووكومرس."
+
+msgid "Invalid payment callback."
+msgstr "استدعاء دفع غير صالح."
+
+msgid "Payment Error"
+msgstr "خطأ في الدفع"
+
+msgid "Customer returned from MyFatoorah without a payment ID."
+msgstr "عاد العميل من ماي فاتورة بدون معرّف دفع."
+
+msgid "Could not confirm MyFatoorah payment: %s"
+msgstr "تعذّر تأكيد دفع ماي فاتورة: %s"
+
+msgid "We received your payment response, but confirmation is still pending. Please check your order again shortly."
+msgstr "استلمنا رد الدفع، لكن التأكيد ما زال قيد المعالجة. يرجى مراجعة طلبك بعد قليل."
+
+msgid "We could not verify this payment safely. Please contact support and provide your order number."
+msgstr "تعذّر التحقق الآمن من هذا الدفع. يرجى التواصل مع الدعم وإرفاق رقم طلبك."
+
+msgid "Your payment is being confirmed. The order will update automatically."
+msgstr "جاري تأكيد دفعك. سيتم تحديث الطلب تلقائيًا."
+
+msgid "The bank declined this card. If you are using a Qatar-issued debit card, try QPay; otherwise try another Visa/Mastercard."
+msgstr "رفض البنك هذه البطاقة. إذا كانت بطاقة خصم قطرية جرّب QPay، وإلا جرّب بطاقة فيزا/ماستركارد أخرى."
+
+msgid "Card payment was not completed. If this is a Qatar-issued debit card, try QPay. Otherwise try another card."
+msgstr "لم يكتمل الدفع بالبطاقة. إذا كانت بطاقة خصم قطرية جرّب QPay، وإلا جرّب بطاقة أخرى."
+
+msgid "The payment was not completed. Please try again or choose another payment method."
+msgstr "لم يكتمل الدفع. حاول مرة أخرى أو اختر طريقة دفع أخرى."
+
+
+msgid "Public return URL (optional)"
+msgstr "رابط العودة العام (اختياري)"
+
+msgid "MyFatoorah rejects localhost return URLs. For Local/ngrok testing, enter a public HTTPS base such as https://abc123.ngrok-free.app (no trailing path). Leave empty on a real public domain."
+msgstr "ماي فاتورة ترفض روابط العودة من localhost. لاختبار Local/ngrok أدخل قاعدة HTTPS عامة مثل https://abc123.ngrok-free.app (بدون مسار). اتركه فارغًا على نطاق عام حقيقي."
+
+msgid "Payment could not be started: MyFatoorah does not accept localhost return URLs. Set “Public return URL” in the gateway settings to an HTTPS tunnel (e.g. ngrok), or test on a public domain."
+msgstr "تعذّر بدء الدفع: ماي فاتورة لا تقبل روابط العودة من localhost. اضبط «رابط العودة العام» في إعدادات البوابة على نفق HTTPS (مثل ngrok)، أو اختبر على نطاق عام."
+
+msgid "MyFatoorah rejected the return URL (localhost is not allowed). Set “Public return URL” to an HTTPS tunnel such as ngrok, or use a public domain."
+msgstr "رفضت ماي فاتورة رابط العودة (localhost غير مسموح). اضبط «رابط العودة العام» على نفق HTTPS مثل ngrok، أو استخدم نطاقًا عامًا."
+
+msgid "Local Qatar · Prepaid - Debit Card"
+msgstr "محلي قطري · Prepaid - Debit Card"
+
+msgid "International · Credit Card"
+msgstr "دولي · Credit Card"
+
+msgid "Debit Card - Credit Card"
+msgstr "Debit Card - Credit Card"
+
+msgid "Visa and Mastercard debit or credit cards."
+msgstr "بطاقات Visa و Mastercard للخصم أو الائتمان."
+
+msgid "Payment verification requires an invoice ID from MyFatoorah."
+msgstr "يتطلب التحقق من الدفع رقم فاتورة من ماي فاتورة."
+
+msgid "Payment verification requires a customer reference from MyFatoorah."
+msgstr "يتطلب التحقق من الدفع مرجع العميل من ماي فاتورة."
+
+msgid "Payment verification requires a paid amount from MyFatoorah."
+msgstr "يتطلب التحقق من الدفع مبلغًا مدفوعًا من ماي فاتورة."
+
+msgid "Payment verification requires a currency from MyFatoorah."
+msgstr "يتطلب التحقق من الدفع عملة من ماي فاتورة."
+
+msgid "Customer returned from MyFatoorah without a payment ID. Order left pending until webhook/reconciliation confirms the result."
+msgstr "عاد العميل من ماي فاتورة بدون معرّف دفع. بقي الطلب معلّقًا حتى يؤكد Webhook أو المصالحة النتيجة."
+
+msgid "Customer returned from MyFatoorah without a payment ID. Waiting for confirmation."
+msgstr "عاد العميل من ماي فاتورة بدون معرّف دفع. بانتظار التأكيد."
+
+msgid "We could not confirm the payment yet. Please wait a moment or try again."
+msgstr "لم نتمكن من تأكيد الدفع بعد. انتظر قليلًا أو حاول مرة أخرى."
+
+msgid "Invoice options"
+msgstr "خيارات الفاتورة"
+
+msgid "Invoice line items"
+msgstr "بنود الفاتورة"
+
+msgid "Send detailed product, shipping, discount, fee and tax lines to MyFatoorah (V2 / QPay)"
+msgstr "إرسال بنود تفصيلية للمنتجات والشحن والخصم والرسوم والضريبة إلى ماي فاتورة (V2 / QPay)"
+
+msgid "When disabled, MyFatoorah receives a single total-amount line. V3 card/wallet payments still send the order total only."
+msgstr "عند التعطيل تستلم ماي فاتورة بندًا واحدًا بإجمالي المبلغ. مدفوعات البطاقة/المحفظة عبر V3 ما زالت ترسل إجمالي الطلب فقط."
+
+msgid "Invoice expiry (minutes)"
+msgstr "صلاحية الفاتورة (بالدقائق)"
+
+msgid "How long the MyFatoorah payment link stays valid. Use 0 to keep the portal default."
+msgstr "مدة صلاحية رابط الدفع في ماي فاتورة. استخدم 0 للإبقاء على الإعداد الافتراضي في البوابة."
+
+msgid "Apple Pay domain"
+msgstr "نطاق Apple Pay"
+
+msgid "Required before Apple Pay works on your live domain. Host the Apple association file at /.well-known/apple-developer-merchantid-domain-association (from MyFatoorah support), then register the domain."
+msgstr "مطلوب قبل عمل Apple Pay على نطاقك المباشر. انشر ملف التحقق من Apple في /.well-known/apple-developer-merchantid-domain-association (من دعم ماي فاتورة)، ثم سجّل النطاق."
+
+msgid "Register domain"
+msgstr "تسجيل النطاق"
+
+msgid "Register this domain with MyFatoorah"
+msgstr "تسجيل هذا النطاق لدى ماي فاتورة"
+
+msgid "Register separately for sandbox and live using the matching API token/test mode."
+msgstr "سجّل بشكل منفصل للتجريبي والمباشر باستخدام رمز API ووضع الاختبار المناسب."
+
+msgid "Registering…"
+msgstr "جارٍ التسجيل…"
+
+msgid "Apple Pay domain registered successfully with MyFatoorah."
+msgstr "تم تسجيل نطاق Apple Pay بنجاح لدى ماي فاتورة."
+
+msgid "Could not determine the site domain for Apple Pay registration."
+msgstr "تعذّر تحديد نطاق الموقع لتسجيل Apple Pay."
+
+msgid "Add this exact URL in MyFatoorah Portal → Integration Settings → Webhook Settings (Webhook V2). Enable PAYMENT_STATUS_CHANGED and REFUND_STATUS_CHANGED."
+msgstr "أضف هذا الرابط حرفيًا في بوابة ماي فاتورة ← إعدادات التكامل ← إعدادات Webhook (Webhook V2). فعّل PAYMENT_STATUS_CHANGED و REFUND_STATUS_CHANGED."
+
+msgid "Total amount for order #%s"
+msgstr "إجمالي مبلغ الطلب رقم %s"
+
+msgid "Shipping"
+msgstr "الشحن"
+
+msgid "Discount"
+msgstr "الخصم"
+
+msgid "Taxes"
+msgstr "الضرائب"
+
+msgid "Adjustment"
+msgstr "تعديل"
+
+msgid "MyFatoorah refunds are only available for processing/completed orders (current status: %s)."
+msgstr "استرجاع ماي فاتورة متاح فقط للطلبات قيد المعالجة/المكتملة (الحالة الحالية: %s)."
+
+msgid "MyFatoorah refund request submitted for %1$s. RefundId: %2$s. Reference: %3$s. Waiting for REFUND_STATUS_CHANGED webhook confirmation."
+msgstr "تم إرسال طلب استرجاع ماي فاتورة بمبلغ %1$s. RefundId: %2$s. المرجع: %3$s. بانتظار تأكيد Webhook لـ REFUND_STATUS_CHANGED."
+
+msgid "Refund request sent to MyFatoorah and is pending confirmation. WooCommerce will update the order when the refund webhook is confirmed."
+msgstr "أُرسل طلب الاسترجاع إلى ماي فاتورة وهو بانتظار التأكيد. سيحدّث ووكومرس الطلب عند تأكيد Webhook للاسترجاع."
+
+msgid "MyFatoorah refund webhook: status %1$s · RefundId %2$s · Reference %3$s"
+msgstr "Webhook استرجاع ماي فاتورة: الحالة %1$s · RefundId %2$s · المرجع %3$s"
+
+msgid "Comment: %s"
+msgstr "التعليق: %s"
+
+msgid "Amount: %s"
+msgstr "المبلغ: %s"
+
+msgid "Refund canceled by MyFatoorah."
+msgstr "أُلغي الاسترجاع من ماي فاتورة."
+
+msgid "MyFatoorah refund confirmed"
+msgstr "تم تأكيد استرجاع ماي فاتورة"
+
+msgid "Refund confirmed in WooCommerce."
+msgstr "تم تأكيد الاسترجاع في ووكومرس."
+
+msgid "Embedded card form"
+msgstr "نموذج البطاقة المضمّن"
+
+msgid "Show MyFatoorah CardView on checkout for Visa / Mastercard (no saved cards)"
+msgstr "إظهار نموذج CardView من ماي فاتورة في الدفع لـ Visa / Mastercard (بدون حفظ البطاقات)"
+
+msgid "QPay and wallet routes still use hosted redirect. After card details are entered, the customer may still complete 3DS on MyFatoorah."
+msgstr "مسارات QPay والمحافظ ما زالت تستخدم إعادة التوجيه. بعد إدخال بيانات البطاقة قد يُطلب من العميل إكمال 3DS على ماي فاتورة."
+
+msgid "Card details"
+msgstr "بيانات البطاقة"
+
+msgid "Embedded card form is temporarily unavailable. Card payments will use the secure MyFatoorah hosted page instead."
+msgstr "نموذج البطاقة المضمّن غير متاح مؤقتًا. ستُستخدم صفحة ماي فاتورة الآمنة المستضافة لمدفوعات البطاقة."
+
+msgid "Name On Card"
+msgstr "الاسم على البطاقة"
+
+msgid "Card number"
+msgstr "رقم البطاقة"
+
+msgid "MM / YY"
+msgstr "شهر / سنة"
+
+msgid "CVV"
+msgstr "CVV"
+
+msgid "Please check your card details and try again."
+msgstr "تحقّق من بيانات البطاقة ثم حاول مرة أخرى."
+
+msgid "MyFatoorah returned an incomplete embedded session."
+msgstr "أعادت ماي فاتورة جلسة مضمّنة غير مكتملة."
+
+msgid "Embedded card session is missing. Please try again."
+msgstr "جلسة البطاقة المضمّنة مفقودة. حاول مرة أخرى."
+
+msgid "MyFatoorah returned an incomplete embedded card response."
+msgstr "أعادت ماي فاتورة استجابة بطاقة مضمّنة غير مكتملة."
+
+msgid "Embedded card payment failed (%s). Falling back to hosted card page."
+msgstr "فشل دفع البطاقة المضمّن (%s). سيتم الرجوع لصفحة البطاقة المستضافة."
+
+msgid "MyFatoorah payment initiated. Route: %1$s. Invoice ID: %2$s.%3$s"
+msgstr "تم بدء دفع ماي فاتورة. المسار: %1$s. رقم الفاتورة: %2$s.%3$s"
+
+msgid "(Embedded CardView)"
+msgstr "(CardView مضمّن)"
+
+msgid "Ignored for order status because a newer payment attempt exists."
+msgstr "تم التجاهل لحالة الطلب لوجود محاولة دفع أحدث."
+
+msgid "Refund currency mismatch (%1$s vs %2$s). WooCommerce refund was not created automatically."
+msgstr "عدم تطابق عملة الاسترجاع (%1$s مقابل %2$s). لم يُنشأ استرجاع ووكومرس تلقائيًا."
+
+msgid "Refund confirmed by MyFatoorah, but display amount was missing. Create the WooCommerce refund manually."
+msgstr "أكدت ماي فاتورة الاسترجاع لكن مبلغ العرض مفقود. أنشئ استرجاع ووكومرس يدويًا."
+
+msgid "Base amount: %s"
+msgstr "المبلغ الأساسي: %s"
+
+msgid "Gift Card"
+msgstr "بطاقة هدية"
+
+msgid "Payment gateway is disabled."
+msgstr "بوابة الدفع معطّلة."
+
+msgid "Embedded card form is disabled."
+msgstr "نموذج البطاقة المضمّن معطّل."
+
+msgid "Choose the country of your MyFatoorah account. QPay checkout options appear only when Qatar is selected."
+msgstr "اختر دولة حساب ماي فاتورة. خيارات QPay في الدفع تظهر فقط عند اختيار قطر."
+
+msgid "Billing country is used first, then shipping, then geolocation. QPay is offered only for Qatar merchant accounts and Qatar customers."
+msgstr "تُستخدم دولة الفوترة أولًا ثم الشحن ثم تحديد الموقع. يُعرض QPay فقط لحسابات تجار قطر وعملاء قطر."
+
+msgid "Shown only when merchant country is Qatar. QPay is unavailable for other MyFatoorah countries."
+msgstr "يظهر فقط عندما تكون دولة التاجر قطر. QPay غير متاح لدول ماي فاتورة الأخرى."
+
+msgid "Also allow Apple Pay and Google Pay as manual choices when enabled on the account"
+msgstr "السماح أيضًا بـ Apple Pay و Google Pay كخيارات يدوية عند تفعيلهما في الحساب"
+
+msgid "Checkout only shows Apple Pay / Google Pay if MyFatoorah reports them as enabled for your account."
+msgstr "يظهر Apple Pay / Google Pay في الدفع فقط إذا أبلغت ماي فاتورة أنهما مفعّلان في حسابك."
+
+msgid "Shown only when merchant country is Qatar."
+msgstr "يظهر فقط عندما تكون دولة التاجر قطر."
+
+msgid "QPay (Qatar only) and wallet routes still use hosted redirect. After card details are entered, the customer may still complete 3DS on MyFatoorah."
+msgstr "مسار QPay (قطر فقط) والمحافظ ما زالا يستخدمان إعادة التوجيه. بعد إدخال بيانات البطاقة قد يُطلب إكمال 3DS على ماي فاتورة."
+
+msgid "Connected. QPay: %1$s · Card: %2$s · Apple Pay: %3$s · Google Pay: %4$s · Methods: %5$s"
+msgstr "تم الاتصال. QPay: %1$s · البطاقة: %2$s · Apple Pay: %3$s · Google Pay: %4$s · الطرق: %5$s"
+
+msgid "Checkout appearance"
+msgstr "مظهر صفحة الدفع"
+
+msgid "Customize colors, fonts and corner radius for the Smart MyFatoorah box on the checkout page."
+msgstr "خصّص الألوان والخطوط وزوايا الحواف لصندوق Smart MyFatoorah في صفحة الدفع."
+
+msgid "Appearance mode"
+msgstr "وضع المظهر"
+
+msgid "Match theme (automatic)"
+msgstr "مطابقة القالب (تلقائي)"
+
+msgid "Custom colors & fonts"
+msgstr "ألوان وخطوط مخصّصة"
+
+msgid "Use theme colors automatically, or set your own brand colors and typography."
+msgstr "استخدم ألوان القالب تلقائيًا، أو عيّن ألوان وخطوط علامتك التجارية."
+
+msgid "Text color"
+msgstr "لون النص"
+
+msgid "Muted text color"
+msgstr "لون النص الثانوي"
+
+msgid "Used for description and secondary help text."
+msgstr "يُستخدم للوصف والنصوص المساعدة الثانوية."
+
+msgid "Accent color"
+msgstr "لون التمييز"
+
+msgid "Highlights the recommended method, selected route and focus states."
+msgstr "يبرز الطريقة الموصى بها والمسار المحدد وحالات التركيز."
+
+msgid "Background color"
+msgstr "لون الخلفية"
+
+msgid "Soft background"
+msgstr "خلفية ناعمة"
+
+msgid "Background of unselected payment route cards."
+msgstr "خلفية بطاقات طرق الدفع غير المحددة."
+
+msgid "Border color"
+msgstr "لون الحدود"
+
+msgid "Font family"
+msgstr "نوع الخط"
+
+msgid "Theme default"
+msgstr "افتراضي القالب"
+
+msgid "System UI"
+msgstr "خط النظام"
+
+msgid "Modern sans-serif"
+msgstr "Sans-serif حديث"
+
+msgid "Classic serif"
+msgstr "Serif كلاسيكي"
+
+msgid "Arabic-friendly sans"
+msgstr "Sans مناسب للعربية"
+
+msgid "Cairo"
+msgstr "Cairo"
+
+msgid "Tajawal"
+msgstr "Tajawal"
+
+msgid "Custom CSS font stack"
+msgstr "مجموعة خطوط CSS مخصّصة"
+
+msgid "Custom font stack"
+msgstr "مجموعة الخطوط المخصّصة"
+
+msgid "Used only when Font family is set to Custom CSS font stack."
+msgstr "تُستخدم فقط عند اختيار مجموعة خطوط CSS مخصّصة."
+
+msgid "Base font size"
+msgstr "حجم الخط الأساسي"
+
+msgid "Title font weight"
+msgstr "سُمك خط العناوين"
+
+msgid "Medium (500)"
+msgstr "متوسط (500)"
+
+msgid "Semi-bold (600)"
+msgstr "شبه عريض (600)"
+
+msgid "Bold (700)"
+msgstr "عريض (700)"
+
+msgid "Extra bold (800)"
+msgstr "عريض جدًا (800)"
+
+msgid "Applies to route captions and section titles inside the payment box."
+msgstr "ينطبق على عناوين المسارات وعناوين الأقسام داخل صندوق الدفع."
+
+msgid "Corner radius"
+msgstr "استدارة الزوايا"
+
+msgid "Regional local methods"
+msgstr "طرق الدفع المحلية الإقليمية"
+
+msgid "Show KNET, Benefit, Mada, STC Pay, Meeza (and QPay) when enabled on the MyFatoorah account"
+msgstr "عرض KNET وBenefit وMada وSTC Pay وMeeza (وQPay) عند تفعيلها في حساب ماي فاتورة"
+
+msgid "Each method appears only for matching customer countries and only if InitiatePayment returns it for your account."
+msgstr "كل طريقة تظهر فقط لدول العملاء المطابقة، وفقط إذا رجعتها InitiatePayment لحسابك."
+
+msgid "Based on your country, a local payment method is pre-selected. You can choose another method below."
+msgstr "بناءً على دولتك، تم اختيار طريقة دفع محلية مسبقًا. يمكنك اختيار طريقة أخرى أدناه."
+
+msgid "Kuwait · KNET"
+msgstr "الكويت · KNET"
+
+msgid "Bahrain · Benefit"
+msgstr "البحرين · Benefit"
+
+msgid "Saudi · Mada"
+msgstr "السعودية · Mada"
+
+msgid "Saudi · STC Pay"
+msgstr "السعودية · STC Pay"
+
+msgid "Egypt · Meeza"
+msgstr "مصر · Meeza"
+
+msgid "KNET — Kuwait debit cards"
+msgstr "KNET — بطاقات خصم كويتية"
+
+msgid "Benefit — Bahrain debit cards"
+msgstr "Benefit — بطاقات خصم بحرينية"
+
+msgid "Mada — Saudi debit cards"
+msgstr "Mada — بطاقات خصم سعودية"
+
+msgid "STC Pay"
+msgstr "STC Pay"
+
+msgid "Meeza — Egypt cards"
+msgstr "Meeza — بطاقات مصر"
+
+msgid "Local method %1$s was unavailable (%2$s). Falling back to card."
+msgstr "الطريقة المحلية %1$s غير متاحة (%2$s). التحويل إلى البطاقة."
+
+
+msgid "Checkout description mode"
+msgstr "وضع وصف الدفع"
+
+msgid "Automatic (based on enabled methods)"
+msgstr "تلقائي (حسب الطرق المفعّلة)"
+
+msgid "Custom text"
+msgstr "نص مخصص"
+
+msgid "Automatic text mentions local methods only when they are enabled on your MyFatoorah account."
+msgstr "النص التلقائي يذكر الطرق المحلية فقط عندما تكون مفعّلة في حساب ماي فاتورة."
+
+msgid "Used only when description mode is Custom. Leave empty to hide the description."
+msgstr "يُستخدم فقط عندما يكون وضع الوصف مخصصًا. اتركه فارغًا لإخفاء الوصف."
+
+msgid "Pay securely through MyFatoorah. We recommend the best local method for your country when available, otherwise card payment."
+msgstr "ادفع بأمان عبر ماي فاتورة. نوصي بأفضل طريقة محلية حسب دولتك عند توفرها، وإلا الدفع بالبطاقة."
+
+msgid "Pay securely through MyFatoorah using Visa or Mastercard."
+msgstr "ادفع بأمان عبر ماي فاتورة باستخدام Visa أو Mastercard."
+
+msgid "Methods per row"
+msgstr "عدد الطرق في السطر"
+
+msgid "2 per row"
+msgstr "٢ في السطر"
+
+msgid "3 per row"
+msgstr "٣ في السطر"
+
+msgid "4 per row"
+msgstr "٤ في السطر"
+
+msgid "Applies to logo layouts and to the text grid layout. On small screens the grid may drop to 2 or 1 columns."
+msgstr "ينطبق على تخطيطات الشعارات وتخطيط شبكة النصوص. على الشاشات الصغيرة قد تصبح الشبكة عمودين أو عمودًا واحدًا."
+
+msgid "Logo layout design"
+msgstr "تصميم عرض الشعارات"
+
+msgid "Cards — bordered tiles with caption"
+msgstr "بطاقات — مربعات بإطار ووصف"
+
+msgid "Compact — denser tiles"
+msgstr "مدمج — مربعات أكثر كثافة"
+
+msgid "Minimal — logo-first, subtle chrome"
+msgstr "بسيط — الشعار أولًا بإطار خفيف"
+
+msgid "Visual style when Checkout route display is Logos."
+msgstr "المظهر البصري عندما يكون عرض طرق الدفع بالشعارات."
+
+msgid "Text layout design"
+msgstr "تصميم عرض النصوص"
+
+msgid "List — stacked full-width rows"
+msgstr "قائمة — صفوف بعرض كامل"
+
+msgid "Pills — wrapped chip buttons"
+msgstr "حبوب — أزرار ملفوفة"
+
+msgid "Grid — multi-column text cards"
+msgstr "شبكة — بطاقات نصية متعددة الأعمدة"
+
+msgid "Visual style when Checkout route display is Text labels only."
+msgstr "المظهر البصري عندما يكون عرض طرق الدفع نصوصًا فقط."
+
+msgid "About"
+msgstr "حول الإضافة"
+
+msgid "How to use"
+msgstr "طريقة الاستخدام"
+
+msgid "Smart MyFatoorah settings tabs"
+msgstr "تبويبات إعدادات ماي فاتورة الذكية"
+
+msgid "A smart WooCommerce payment gateway built on MyFatoorah. It recommends the best local method for the customer country when available (QPay, KNET, Benefit, Mada, STC Pay, Meeza), with Visa/Mastercard and optional Apple Pay / Google Pay."
+msgstr "بوابة دفع ووكومرس ذكية مبنية على ماي فاتورة. توصي بأفضل طريقة محلية حسب دولة العميل عند توفرها (QPay وKNET وBenefit وMada وSTC Pay وMeeza)، مع Visa/Mastercard واختياريًا Apple Pay / Google Pay."
+
+msgid "Classic Checkout and Checkout Blocks support"
+msgstr "دعم الدفع الكلاسيكي وCheckout Blocks"
+
+msgid "Signed Webhook V2, secure callbacks, and automatic reconciliation"
+msgstr "Webhook V2 موقّع، واستدعاءات آمنة، ومصالحة تلقائية"
+
+msgid "Embedded card form (CardView) with hosted fallback"
+msgstr "نموذج بطاقة مضمّن (CardView) مع بديل صفحة ماي فاتورة"
+
+msgid "Transaction log, refunds via MyFatoorah, and checkout appearance controls"
+msgstr "سجل معاملات، واسترجاع عبر ماي فاتورة، وتحكم بمظهر الدفع"
+
+msgid "Developer"
+msgstr "المطوّر"
+
+msgid "Aymen Ali"
+msgstr "أيمن علي"
+
+msgid "Flutter developer, UI/UX designer, and WordPress / WooCommerce specialist based in Qatar — focused on reliable payments, clear UX, and production-ready integrations."
+msgstr "مطوّر Flutter ومصمّم UI/UX ومتخصص ووردبريس / ووكومرس مقيم في قطر — يركّز على مدفوعات موثوقة وتجربة واضحة وتكامل جاهز للإنتاج."
+
+msgid "GitHub: aymentucker"
+msgstr "GitHub: aymentucker"
+
+msgid "Plugin version: %s"
+msgstr "إصدار الإضافة: %s"
+
+msgid "Quick setup"
+msgstr "إعداد سريع"
+
+msgid "Deactivate the official MyFatoorah WooCommerce plugin if it is active (both listen on the same webhook URL)."
+msgstr "عطّل إضافة ماي فاتورة الرسمية إن كانت مفعّلة (كلاهما يستمع لنفس رابط الويبهوك)."
+
+msgid "Enable this gateway, set Merchant country to your MyFatoorah account country, and paste your API token."
+msgstr "فعّل هذه البوابة، واضبط دولة التاجر على دولة حساب ماي فاتورة، والصق رمز API."
+
+msgid "Use Test mode with a Demo token first, then click Test MyFatoorah connection."
+msgstr "استخدم وضع الاختبار مع توكن Demo أولًا، ثم اضغط اختبار اتصال ماي فاتورة."
+
+msgid "In MyFatoorah Portal → Integration Settings → Webhook Settings (V2), paste this URL and enable PAYMENT_STATUS_CHANGED (and REFUND_STATUS_CHANGED if you use refunds):"
+msgstr "في بوابة ماي فاتورة ← إعدادات التكامل ← إعدادات Webhook (V2)، الصق هذا الرابط وفعّل PAYMENT_STATUS_CHANGED (وREFUND_STATUS_CHANGED إن استخدمت الاسترجاع):"
+
+msgid "Copy the Webhook Secret Key from MyFatoorah into the Webhook Secret Key field on the Settings tab."
+msgstr "انسخ مفتاح Webhook السري من ماي فاتورة والصقه في حقل مفتاح Webhook السري ضمن تبويب الإعدادات."
+
+msgid "How routing works"
+msgstr "كيف يعمل التوجيه"
+
+msgid "Local methods appear only if MyFatoorah returns them for your account and the customer billing country matches (e.g. QA → QPay, KW → KNET, BH → Benefit, SA → Mada/STC, EG → Meeza)."
+msgstr "الطرق المحلية تظهر فقط إذا رجعتها ماي فاتورة لحسابك وطابقت دولة فوترة العميل (مثل QA → QPay، KW → KNET، BH → Benefit، SA → Mada/STC، EG → Meeza)."
+
+msgid "Card (Visa/Mastercard) is always available as the international option."
+msgstr "البطاقة (Visa/Mastercard) متاحة دائمًا كخيار دولي."
+
+msgid "Apple Pay / Google Pay show only when enabled on the account and wallet overrides are turned on."
+msgstr "يظهر Apple Pay / Google Pay فقط عند تفعيلهما في الحساب وتشغيل خيارات المحفظة."
+
+msgid "Use Methods per row and Logo/Text layout designs to style the checkout method picker."
+msgstr "استخدم عدد الطرق في السطر وتصاميم عرض الشعارات/النصوص لتنسيق اختيار طريقة الدفع."
+
+msgid "Going live"
+msgstr "الانتقال للوضع المباشر"
+
+msgid "Replace the Demo token with a Live token and turn Test mode off."
+msgstr "استبدل توكن Demo بتوكن Live وأوقف وضع الاختبار."
+
+msgid "Confirm the site uses HTTPS."
+msgstr "تأكد أن الموقع يستخدم HTTPS."
+
+msgid "Re-test the connection, then place small real payments for a local method and for card."
+msgstr "أعد اختبار الاتصال ثم نفّذ مدفوعات حقيقية صغيرة لطريقة محلية وللبطاقة."
+
+msgid "Verify order status, MyFatoorah portal, webhook delivery, and WooCommerce → MyFatoorah Transactions."
+msgstr "تحقق من حالة الطلب وبوابة ماي فاتورة ووصول الويبهوك ومسار ووكومرس ← معاملات ماي فاتورة."
+
+msgid "Full documentation is available in MYFATOORAH-SETUP.md inside the plugin folder."
+msgstr "التوثيق الكامل متوفر في ملف MYFATOORAH-SETUP.md داخل مجلد الإضافة."

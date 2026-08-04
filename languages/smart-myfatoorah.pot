@@ -1,0 +1,708 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart MyFatoorah Gateway 1.0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-03 09:40+0300\n"
+"PO-Revision-Date: 2026-08-03 09:40+0300\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: smart-myfatoorah\n"
+
+msgid "Pay securely through MyFatoorah. We automatically recommend QPay for Qatar and card payment for other countries."
+msgstr ""
+
+msgid "Smart MyFatoorah"
+msgstr ""
+
+msgid "Smart geographic routing: QPay for Qatar customers and card payment for international customers, with secure MyFatoorah callbacks and webhooks."
+msgstr ""
+
+msgid "Enable/Disable"
+msgstr ""
+
+msgid "Enable Smart MyFatoorah Gateway"
+msgstr ""
+
+msgid "Checkout title"
+msgstr ""
+
+msgid "Secure payment"
+msgstr ""
+
+msgid "Title shown to customers at checkout."
+msgstr ""
+
+msgid "Checkout description"
+msgstr ""
+
+msgid "MyFatoorah connection"
+msgstr ""
+
+msgid "Test mode"
+msgstr ""
+
+msgid "Use MyFatoorah sandbox"
+msgstr ""
+
+msgid "Merchant country"
+msgstr ""
+
+msgid "Qatar"
+msgstr ""
+
+msgid "Kuwait"
+msgstr ""
+
+msgid "Saudi Arabia"
+msgstr ""
+
+msgid "United Arab Emirates"
+msgstr ""
+
+msgid "Bahrain"
+msgstr ""
+
+msgid "Oman"
+msgstr ""
+
+msgid "Jordan"
+msgstr ""
+
+msgid "Egypt"
+msgstr ""
+
+msgid "For a Qatar MyFatoorah account choose Qatar. Each MyFatoorah country may use a different live API host/token."
+msgstr ""
+
+msgid "API token"
+msgstr ""
+
+msgid "Create an API key in your MyFatoorah portal. Never share this token publicly."
+msgstr ""
+
+msgid "Connection test"
+msgstr ""
+
+msgid "Smart payment routing"
+msgstr ""
+
+msgid "The gateway uses billing country first, then shipping country, then WooCommerce geolocation. Qatar defaults to QPay; other countries default to bank card."
+msgstr ""
+
+msgid "Customer override"
+msgstr ""
+
+msgid "Allow customers to change the recommended method"
+msgstr ""
+
+msgid "Remember preference"
+msgstr ""
+
+msgid "Remember the last successful method for logged-in customers"
+msgstr ""
+
+msgid "QPay fallback"
+msgstr ""
+
+msgid "If QPay is not enabled/available, automatically fall back to card payment"
+msgstr ""
+
+msgid "Local method fallback"
+msgstr ""
+
+msgid "If a local method (QPay/KNET/Benefit/Mada/…) fails, automatically fall back to card payment"
+msgstr ""
+
+msgid "Recommended. Prevents hard checkout errors when a regional method is temporarily unavailable."
+msgstr ""
+
+msgid "Shown only when merchant country is Qatar. QPay is unavailable for other MyFatoorah countries."
+msgstr ""
+
+msgid "Wallet overrides"
+msgstr ""
+
+msgid "Also allow Apple Pay and Google Pay as manual choices"
+msgstr ""
+
+msgid "Checkout route display"
+msgstr ""
+
+msgid "Logos (payment brand images)"
+msgstr ""
+
+msgid "Text labels only"
+msgstr ""
+
+msgid "Choose whether payment route options show brand logos or text labels at checkout."
+msgstr ""
+
+msgid "QPay label"
+msgstr ""
+
+msgid "QPay — Qatar debit cards"
+msgstr ""
+
+msgid "Card label"
+msgstr ""
+
+msgid "Visa / Mastercard"
+msgstr ""
+
+msgid "Webhook & reliability"
+msgstr ""
+
+msgid "Webhook"
+msgstr ""
+
+msgid "Process MyFatoorah Webhook V2 payment and refund status events"
+msgstr ""
+
+msgid "Webhook endpoint"
+msgstr ""
+
+msgid "Webhook secret"
+msgstr ""
+
+msgid "Use the secure key configured in MyFatoorah Integration Settings → Webhook Settings (Webhook V2)."
+msgstr ""
+
+msgid "Automatic reconciliation"
+msgstr ""
+
+msgid "Re-check pending payments every 15 minutes for up to 24 hours"
+msgstr ""
+
+msgid "Debug log"
+msgstr ""
+
+msgid "Write sanitized MyFatoorah logs to WooCommerce logs"
+msgstr ""
+
+msgid "API tokens and sensitive card fields are never written by this plugin."
+msgstr ""
+
+msgid "Refunds"
+msgstr ""
+
+msgid "WooCommerce refunds"
+msgstr ""
+
+msgid "Allow refund requests from WooCommerce orders"
+msgstr ""
+
+msgid "Refunds are submitted to MyFatoorah first. WooCommerce updates the order when the REFUND_STATUS_CHANGED webhook confirms the refund (finance review may apply)."
+msgstr ""
+
+msgid "Recommended"
+msgstr ""
+
+msgid "Based on your country, QPay is pre-selected. You can choose another method below."
+msgstr ""
+
+msgid "Based on your country, card payment is pre-selected. You can choose another method below."
+msgstr ""
+
+msgid "Payment method"
+msgstr ""
+
+msgid "Best for Qatar-issued debit cards."
+msgstr ""
+
+msgid "For credit cards and international bank cards."
+msgstr ""
+
+msgid "Apple Pay"
+msgstr ""
+
+msgid "Google Pay"
+msgstr ""
+
+msgid "The best payment method for your country will be used automatically."
+msgstr ""
+
+msgid "Unable to create the payment order."
+msgstr ""
+
+msgid "QPay routing was unavailable (%s). Falling back to card."
+msgstr ""
+
+msgid "Payment could not be started: %s"
+msgstr ""
+
+msgid "MyFatoorah payment initiated. Route: %1$s. Invoice ID: %2$s."
+msgstr ""
+
+msgid "Order not found."
+msgstr ""
+
+msgid "MyFatoorah payment ID is missing from this order."
+msgstr ""
+
+msgid "MyFatoorah refund request submitted for %1$s. Reference: %2$s. Final settlement may require MyFatoorah finance review."
+msgstr ""
+
+msgid "Add this exact URL in MyFatoorah Portal → Integration Settings → Webhook Settings and select Webhook V2 / PAYMENT_STATUS_CHANGED."
+msgstr ""
+
+msgid "Test MyFatoorah connection"
+msgstr ""
+
+msgid "Save settings first. The test uses InitiatePayment only; it does not charge a card."
+msgstr ""
+
+msgid "Every 15 minutes (Smart MyFatoorah)"
+msgstr ""
+
+msgid "Invalid payment details."
+msgstr ""
+
+msgid "MyFatoorah verification failed: %s"
+msgstr ""
+
+msgid "MyFatoorah payment confirmed via %1$s. Payment ID: %2$s"
+msgstr ""
+
+msgid "gateway"
+msgstr ""
+
+msgid "Invoice ID does not match the WooCommerce order."
+msgstr ""
+
+msgid "Customer reference does not match the WooCommerce order."
+msgstr ""
+
+msgid "Paid amount mismatch. Expected %1$s, received %2$s."
+msgstr ""
+
+msgid "Payment currency mismatch. Expected %1$s, received %2$s."
+msgstr ""
+
+msgid "MyFatoorah payment failed (%s)."
+msgstr ""
+
+msgid "MyFatoorah webhook received, but verification failed: %s"
+msgstr ""
+
+msgid "MyFatoorah Transactions"
+msgstr ""
+
+msgid "Testing…"
+msgstr ""
+
+msgid "Permission denied."
+msgstr ""
+
+msgid "Connected. QPay: %1$s · Card: %2$s · Enabled methods: %3$s"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "A local operational log of payment attempts. No full card numbers, CVV values or OTP codes are stored."
+msgstr ""
+
+msgid "Gateway settings"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Route"
+msgstr ""
+
+msgid "Amount"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Invoice"
+msgstr ""
+
+msgid "Payment ID"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Updated"
+msgstr ""
+
+msgid "No payment attempts recorded yet."
+msgstr ""
+
+msgid "MyFatoorah returned no enabled payment methods."
+msgstr ""
+
+msgid "QPay is not enabled on this MyFatoorah account. Enable Qatar Debit Cards / QPay in MyFatoorah, or allow card fallback."
+msgstr ""
+
+msgid "MyFatoorah returned an incomplete QPay response."
+msgstr ""
+
+msgid "MyFatoorah returned an incomplete payment response."
+msgstr ""
+
+msgid "Missing MyFatoorah payment ID."
+msgstr ""
+
+msgid "MyFatoorah API token is not configured."
+msgstr ""
+
+msgid "MyFatoorah returned an invalid response."
+msgstr ""
+
+msgid "MyFatoorah API request failed (HTTP %d)."
+msgstr ""
+
+msgid "Customer"
+msgstr ""
+
+msgid "Smart MyFatoorah Gateway requires WooCommerce to be installed and active."
+msgstr ""
+
+msgid "Invalid payment callback."
+msgstr ""
+
+msgid "Payment Error"
+msgstr ""
+
+msgid "Customer returned from MyFatoorah without a payment ID."
+msgstr ""
+
+msgid "Could not confirm MyFatoorah payment: %s"
+msgstr ""
+
+msgid "We received your payment response, but confirmation is still pending. Please check your order again shortly."
+msgstr ""
+
+msgid "We could not verify this payment safely. Please contact support and provide your order number."
+msgstr ""
+
+msgid "Your payment is being confirmed. The order will update automatically."
+msgstr ""
+
+msgid "The bank declined this card. If you are using a Qatar-issued debit card, try QPay; otherwise try another Visa/Mastercard."
+msgstr ""
+
+msgid "Card payment was not completed. If this is a Qatar-issued debit card, try QPay. Otherwise try another card."
+msgstr ""
+
+msgid "The payment was not completed. Please try again or choose another payment method."
+msgstr ""
+
+
+msgid "Local · Qatar debit"
+msgstr ""
+
+msgid "International · Visa / Mastercard"
+msgstr ""
+
+msgid "Invoice options"
+msgstr ""
+
+msgid "Invoice line items"
+msgstr ""
+
+msgid "Send detailed product, shipping, discount, fee and tax lines to MyFatoorah (V2 / QPay)"
+msgstr ""
+
+msgid "When disabled, MyFatoorah receives a single total-amount line. V3 card/wallet payments still send the order total only."
+msgstr ""
+
+msgid "Invoice expiry (minutes)"
+msgstr ""
+
+msgid "How long the MyFatoorah payment link stays valid. Use 0 to keep the portal default."
+msgstr ""
+
+msgid "Apple Pay domain"
+msgstr ""
+
+msgid "Required before Apple Pay works on your live domain. Host the Apple association file at /.well-known/apple-developer-merchantid-domain-association (from MyFatoorah support), then register the domain."
+msgstr ""
+
+msgid "Register domain"
+msgstr ""
+
+msgid "Register this domain with MyFatoorah"
+msgstr ""
+
+msgid "Register separately for sandbox and live using the matching API token/test mode."
+msgstr ""
+
+msgid "Registering…"
+msgstr ""
+
+msgid "Apple Pay domain registered successfully with MyFatoorah."
+msgstr ""
+
+msgid "Could not determine the site domain for Apple Pay registration."
+msgstr ""
+
+msgid "Add this exact URL in MyFatoorah Portal → Integration Settings → Webhook Settings (Webhook V2). Enable PAYMENT_STATUS_CHANGED and REFUND_STATUS_CHANGED."
+msgstr ""
+
+msgid "Total amount for order #%s"
+msgstr ""
+
+msgid "Shipping"
+msgstr ""
+
+msgid "Discount"
+msgstr ""
+
+msgid "Taxes"
+msgstr ""
+
+msgid "Adjustment"
+msgstr ""
+
+msgid "MyFatoorah refunds are only available for processing/completed orders (current status: %s)."
+msgstr ""
+
+msgid "MyFatoorah refund request submitted for %1$s. RefundId: %2$s. Reference: %3$s. Waiting for REFUND_STATUS_CHANGED webhook confirmation."
+msgstr ""
+
+msgid "Refund request sent to MyFatoorah and is pending confirmation. WooCommerce will update the order when the refund webhook is confirmed."
+msgstr ""
+
+msgid "MyFatoorah refund webhook: status %1$s · RefundId %2$s · Reference %3$s"
+msgstr ""
+
+msgid "Comment: %s"
+msgstr ""
+
+msgid "Amount: %s"
+msgstr ""
+
+msgid "Refund canceled by MyFatoorah."
+msgstr ""
+
+msgid "MyFatoorah refund confirmed"
+msgstr ""
+
+msgid "Refund confirmed in WooCommerce."
+msgstr ""
+
+msgid "Embedded card form"
+msgstr ""
+
+msgid "Show MyFatoorah CardView on checkout for Visa/Mastercard (instead of redirecting immediately)"
+msgstr ""
+
+msgid "When enabled, card details are collected on your checkout page. QPay and wallet routes still use hosted redirect."
+msgstr ""
+
+msgid "Save cards"
+msgstr ""
+
+msgid "Allow logged-in customers to save cards for future payments (requires MyFatoorah account feature)"
+msgstr ""
+
+msgid "Uses a stable MyFatoorah customer key (CK-{user id}). Must be enabled on your MyFatoorah account."
+msgstr ""
+
+msgid "Enter card details"
+msgstr ""
+
+msgid "Card form unavailable (%s). Checkout will redirect to MyFatoorah hosted card payment."
+msgstr ""
+
+msgid "Card form unavailable. Checkout will redirect to MyFatoorah hosted card payment."
+msgstr ""
+
+msgid "Save card number for future payments"
+msgstr ""
+
+msgid "Use another card"
+msgstr ""
+
+msgid "Delete Card"
+msgstr ""
+
+msgid "Are you sure you want to remove this card?"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Name On Card"
+msgstr ""
+
+msgid "Number"
+msgstr ""
+
+msgid "MM / YY"
+msgstr ""
+
+msgid "CVV"
+msgstr ""
+
+msgid "Please complete your card details, then try again."
+msgstr ""
+
+msgid "MyFatoorah did not return an embedded payment session."
+msgstr ""
+
+msgid "Missing MyFatoorah card session. Please enter card details and try again."
+msgstr ""
+
+msgid "MyFatoorah returned an incomplete embedded card response."
+msgstr ""
+
+msgid "Embedded card session failed (%s). Falling back to hosted card payment."
+msgstr ""
+
+msgid "Secure fields powered by MyFatoorah. Saved cards appear here when available."
+msgstr ""
+
+msgid "Save this card for faster checkout next time"
+msgstr ""
+
+msgid "Pay with a different card"
+msgstr ""
+
+msgid "Remove saved card"
+msgstr ""
+
+msgid "Remove this card from your saved payment methods?"
+msgstr ""
+
+msgid "Name on card"
+msgstr ""
+
+msgid "Card number"
+msgstr ""
+
+msgid "Cardholder name"
+msgstr ""
+
+msgid "Expiry"
+msgstr ""
+
+msgid "Security code"
+msgstr ""
+
+msgid "Card payment"
+msgstr ""
+
+msgid "Saved cards"
+msgstr ""
+
+msgid "New card"
+msgstr ""
+
+msgid "Enter details"
+msgstr ""
+
+msgid "Security code (CVV)"
+msgstr ""
+
+msgid "Card details"
+msgstr ""
+
+msgid "Checkout description mode"
+msgstr ""
+
+msgid "Automatic (based on enabled methods)"
+msgstr ""
+
+msgid "Custom text"
+msgstr ""
+
+msgid "Automatic text mentions local methods only when they are enabled on your MyFatoorah account."
+msgstr ""
+
+msgid "Used only when description mode is Custom. Leave empty to hide the description."
+msgstr ""
+
+msgid "Pay securely through MyFatoorah. We recommend the best local method for your country when available, otherwise card payment."
+msgstr ""
+
+msgid "Pay securely through MyFatoorah using Visa or Mastercard."
+msgstr ""
+
+msgid "Methods per row"
+msgstr ""
+
+msgid "2 per row"
+msgstr ""
+
+msgid "3 per row"
+msgstr ""
+
+msgid "4 per row"
+msgstr ""
+
+msgid "Applies to logo layouts and to the text grid layout. On small screens the grid may drop to 2 or 1 columns."
+msgstr ""
+
+msgid "Logo layout design"
+msgstr ""
+
+msgid "Cards — bordered tiles with caption"
+msgstr ""
+
+msgid "Compact — denser tiles"
+msgstr ""
+
+msgid "Minimal — logo-first, subtle chrome"
+msgstr ""
+
+msgid "Visual style when Checkout route display is Logos."
+msgstr ""
+
+msgid "Text layout design"
+msgstr ""
+
+msgid "List — stacked full-width rows"
+msgstr ""
+
+msgid "Pills — wrapped chip buttons"
+msgstr ""
+
+msgid "Grid — multi-column text cards"
+msgstr ""
+
+msgid "Visual style when Checkout route display is Text labels only."
+msgstr ""
+
+msgid "Local method %1$s was unavailable (%2$s). Falling back to card."
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "How to use"
+msgstr ""
+
+msgid "Smart MyFatoorah settings tabs"
+msgstr ""
+
+msgid "Developer"
+msgstr ""
+
+msgid "Quick setup"
+msgstr ""
+
+msgid "How routing works"
+msgstr ""
+
+msgid "Going live"
+msgstr ""

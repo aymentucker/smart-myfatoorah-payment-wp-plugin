@@ -1,0 +1,688 @@
+/**
+ * Smart MyFatoorah checkout UI
+ * Adapts to light/dark themes via host CSS variables, common dark-mode
+ * selectors, and prefers-color-scheme — with safe contrast fallbacks.
+ */
+
+.smf-checkout-box,
+.payment_box.payment_method_smart_myfatoorah {
+    /* Light defaults (explicit contrast — never inherit invisible text) */
+    --smf-bg: #ffffff;
+    --smf-bg-soft: #f4f6f8;
+    --smf-bg-selected: rgba(180, 83, 9, 0.08);
+    --smf-border: rgba(15, 23, 42, 0.12);
+    --smf-border-strong: rgba(15, 23, 42, 0.18);
+    --smf-text: #0f172a;
+    --smf-muted: #64748b;
+    --smf-accent: #b45309;
+    --smf-accent-soft: rgba(180, 83, 9, 0.12);
+    --smf-accent-border: rgba(180, 83, 9, 0.42);
+    --smf-focus: rgba(180, 83, 9, 0.35);
+    --smf-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    --smf-radius: 16px;
+    --smf-radius-sm: 12px;
+
+    /* Prefer theme / global design tokens when present */
+    --smf-bg: var(--desfolio-card, var(--wp--preset--color--base, var(--background, #ffffff)));
+    --smf-bg-soft: var(--desfolio-bg-soft, var(--wp--preset--color--base-2, #f4f6f8));
+    --smf-border: var(--desfolio-border, rgba(15, 23, 42, 0.12));
+    --smf-text: var(--desfolio-text, var(--wp--preset--color--contrast, var(--text, #0f172a)));
+    --smf-muted: var(--desfolio-muted, #64748b);
+    --smf-accent: var(--desfolio-accent, #b45309);
+    --smf-shadow: var(--desfolio-shadow, 0 10px 30px rgba(15, 23, 42, 0.06));
+    --smf-radius: var(--desfolio-radius, 16px);
+}
+
+@supports (color: color-mix(in srgb, red 50%, blue)) {
+
+    .smf-checkout-box,
+    .payment_box.payment_method_smart_myfatoorah {
+        --smf-accent-soft: color-mix(in srgb, var(--smf-accent) 14%, transparent);
+        --smf-accent-border: color-mix(in srgb, var(--smf-accent) 45%, transparent);
+        --smf-focus: color-mix(in srgb, var(--smf-accent) 40%, transparent);
+        --smf-bg-selected: color-mix(in srgb, var(--smf-accent) 12%, var(--smf-bg));
+    }
+}
+
+/* Dark mode: system preference (when theme doesn't override tokens) */
+@media (prefers-color-scheme: dark) {
+
+    .smf-checkout-box,
+    .payment_box.payment_method_smart_myfatoorah {
+        --smf-bg: var(--desfolio-card, #1a1a1a);
+        --smf-bg-soft: var(--desfolio-bg-soft, #141414);
+        --smf-bg-selected: rgba(255, 255, 255, 0.06);
+        --smf-border: var(--desfolio-border, rgba(255, 255, 255, 0.12));
+        --smf-border-strong: rgba(255, 255, 255, 0.18);
+        --smf-text: var(--desfolio-text, #f5f5f5);
+        --smf-muted: var(--desfolio-muted, #a3a3a3);
+        --smf-accent: var(--desfolio-accent, #d6a84f);
+        --smf-shadow: var(--desfolio-shadow, 0 16px 40px rgba(0, 0, 0, 0.35));
+    }
+}
+
+/* Dark mode: common theme / plugin class hooks */
+html[data-theme="dark"] .smf-checkout-box,
+html[data-theme="dark"] .payment_box.payment_method_smart_myfatoorah,
+html[data-bs-theme="dark"] .smf-checkout-box,
+html[data-bs-theme="dark"] .payment_box.payment_method_smart_myfatoorah,
+body.dark .smf-checkout-box,
+body.dark .payment_box.payment_method_smart_myfatoorah,
+body.theme-dark .smf-checkout-box,
+body.theme-dark .payment_box.payment_method_smart_myfatoorah,
+.dark .smf-checkout-box,
+.dark .payment_box.payment_method_smart_myfatoorah,
+.wp-dark-mode-active .smf-checkout-box,
+.wp-dark-mode-active .payment_box.payment_method_smart_myfatoorah,
+.darkmode--activated .smf-checkout-box,
+.darkmode--activated .payment_box.payment_method_smart_myfatoorah,
+[data-color-mode="dark"] .smf-checkout-box,
+[data-color-mode="dark"] .payment_box.payment_method_smart_myfatoorah {
+    --smf-bg: var(--desfolio-card, #1a1a1a);
+    --smf-bg-soft: var(--desfolio-bg-soft, #141414);
+    --smf-bg-selected: rgba(255, 255, 255, 0.06);
+    --smf-border: var(--desfolio-border, rgba(255, 255, 255, 0.12));
+    --smf-border-strong: rgba(255, 255, 255, 0.18);
+    --smf-text: var(--desfolio-text, #f5f5f5);
+    --smf-muted: var(--desfolio-muted, #a3a3a3);
+    --smf-accent: var(--desfolio-accent, #d6a84f);
+    --smf-shadow: var(--desfolio-shadow, 0 16px 40px rgba(0, 0, 0, 0.35));
+}
+
+/* Explicit light override when theme forces light despite OS dark preference */
+html[data-theme="light"] .smf-checkout-box,
+html[data-theme="light"] .payment_box.payment_method_smart_myfatoorah,
+html[data-bs-theme="light"] .smf-checkout-box,
+html[data-bs-theme="light"] .payment_box.payment_method_smart_myfatoorah,
+body.light .smf-checkout-box,
+body.light .payment_box.payment_method_smart_myfatoorah,
+body.theme-light .smf-checkout-box,
+body.theme-light .payment_box.payment_method_smart_myfatoorah,
+[data-color-mode="light"] .smf-checkout-box,
+[data-color-mode="light"] .payment_box.payment_method_smart_myfatoorah {
+    --smf-bg: #ffffff;
+    --smf-bg-soft: #f4f6f8;
+    --smf-bg-selected: rgba(15, 23, 42, 0.04);
+    --smf-border: rgba(15, 23, 42, 0.12);
+    --smf-border-strong: rgba(15, 23, 42, 0.18);
+    --smf-text: #0f172a;
+    --smf-muted: #64748b;
+    --smf-accent: var(--desfolio-accent, #b45309);
+    --smf-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.smf-checkout-box {
+    margin-top: 4px;
+    padding: 16px;
+    border: 1px solid var(--smf-border);
+    border-radius: var(--smf-radius);
+    background: var(--smf-bg);
+    color: var(--smf-text);
+    box-shadow: var(--smf-shadow);
+    box-sizing: border-box;
+    font-family: var(--smf-font, inherit);
+    font-size: var(--smf-font-size, 14px);
+    line-height: 1.5;
+}
+
+.payment_box.payment_method_smart_myfatoorah {
+    background: transparent !important;
+    color: inherit !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 12px 0 0 !important;
+    position: relative !important;
+}
+
+/* Kill WooCommerce / theme tooltip arrow on the SMF payment box */
+.payment_box.payment_method_smart_myfatoorah::before,
+.payment_box.payment_method_smart_myfatoorah::after,
+#payment div.payment_box.payment_method_smart_myfatoorah::before,
+#payment div.payment_box.payment_method_smart_myfatoorah::after {
+    content: none !important;
+    display: none !important;
+    border: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+}
+
+.payment_box.payment_method_smart_myfatoorah>p,
+.smf-checkout-box>p,
+.smf-description {
+    margin: 0 0 12px;
+    color: var(--smf-muted);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.smf-recommendation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 14px;
+    padding: 10px 12px;
+    border-radius: var(--smf-radius-sm);
+    border: 1px solid var(--smf-accent-border);
+    background: var(--smf-accent-soft);
+    color: var(--smf-text);
+    font-size: 13px;
+    font-weight: var(--smf-title-weight, 650);
+    line-height: 1.45;
+}
+
+.smf-recommendation::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--smf-accent);
+    box-shadow: 0 0 0 4px var(--smf-accent-soft);
+}
+
+.smf-routes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Column grids (logos + text grid) */
+.smf-checkout-box--logos .smf-routes,
+.smf-checkout-box--text.smf-text-layout-grid .smf-routes {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.smf-checkout-box.smf-cols-2 .smf-routes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.smf-checkout-box.smf-cols-3 .smf-routes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.smf-checkout-box.smf-cols-4 .smf-routes {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.smf-checkout-box--text.smf-text-layout-list .smf-routes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.smf-checkout-box--text.smf-text-layout-pills .smf-routes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.smf-checkout-box--text.smf-text-layout-pills .smf-route-option {
+    flex: 1 1 auto;
+    min-width: 140px;
+    border-radius: 999px;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.smf-checkout-box--text.smf-text-layout-pills .smf-route-option small {
+    display: none;
+}
+
+.smf-checkout-box--text.smf-text-layout-grid .smf-route-option {
+    min-height: 72px;
+}
+
+.smf-route-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--smf-border);
+    border-radius: var(--smf-radius-sm);
+    background: var(--smf-bg-soft);
+    color: var(--smf-text);
+    cursor: pointer;
+    transition: border-color 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.smf-route-option--hidden,
+.smf-route-option[hidden] {
+    display: none !important;
+}
+
+.smf-route-option:hover {
+    border-color: var(--smf-border-strong);
+}
+
+.smf-route-option.is-selected,
+.smf-route-option:has(input:checked) {
+    border-color: var(--smf-accent-border);
+    background: var(--smf-bg-selected);
+    box-shadow: inset 0 0 0 1px var(--smf-accent-border);
+}
+
+.smf-route-option:not(.is-selected):not(:has(input:checked)) {
+    opacity: 0.92;
+}
+
+.smf-route-option.is-selected {
+    opacity: 1;
+}
+
+.smf-logo-row,
+.smf-label-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.smf-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: var(--smf-accent-soft);
+    border: 1px solid var(--smf-accent-border);
+    color: var(--smf-text);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+.smf-route-option:focus-within {
+    outline: 2px solid var(--smf-focus);
+    outline-offset: 2px;
+}
+
+/* Custom radio — fully isolated from theme form styles */
+.smf-radio-wrap {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    width: 22px !important;
+    height: 22px !important;
+    margin: 1px 0 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+}
+
+.smf-route-option .smf-radio-input,
+.smf-checkout-box input.smf-radio-input[type="radio"],
+.payment_box.payment_method_smart_myfatoorah input.smf-radio-input[type="radio"] {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    width: 22px !important;
+    height: 22px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    cursor: pointer !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    accent-color: transparent !important;
+}
+
+.smf-radio {
+    display: block !important;
+    box-sizing: border-box !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 2px solid var(--smf-border-strong, #94a3b8) !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    box-shadow: inset 0 0 0 0 var(--smf-accent, #b45309) !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease !important;
+    pointer-events: none !important;
+}
+
+.smf-route-option:hover .smf-radio {
+    border-color: var(--smf-accent, #b45309) !important;
+}
+
+.smf-route-option.is-selected .smf-radio,
+.smf-route-option:has(.smf-radio-input:checked) .smf-radio,
+.smf-radio-wrap:has(.smf-radio-input:checked) .smf-radio {
+    border-color: var(--smf-accent, #b45309) !important;
+    background: #ffffff !important;
+    box-shadow: inset 0 0 0 5px var(--smf-accent, #b45309) !important;
+}
+
+.smf-radio-wrap:focus-within .smf-radio,
+.smf-route-option:focus-within .smf-radio {
+    outline: 2px solid var(--smf-focus, rgba(180, 83, 9, 0.35)) !important;
+    outline-offset: 2px !important;
+}
+
+.smf-route-option--logo {
+    align-items: center;
+}
+
+.smf-route-option--logo .smf-radio-wrap {
+    margin-top: 0 !important;
+}
+
+.smf-route-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    color: inherit;
+    flex: 1 1 auto;
+}
+
+.smf-route-content--logo {
+    gap: 6px;
+}
+
+.smf-route-option strong {
+    color: var(--smf-text);
+    font-size: var(--smf-font-size, 14px);
+    font-weight: var(--smf-title-weight, 700);
+    line-height: 1.35;
+}
+
+.smf-route-option small,
+.smf-auto-copy {
+    color: var(--smf-muted);
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.smf-auto-copy {
+    margin: 0;
+}
+
+/* Brand logos — always visible on light AND dark themes.
+   Themes often set `img { height:auto; max-width:100% }` or hide
+   payment-box images; force a light badge + explicit image size. */
+.smf-logo-badge {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    max-width: 100%;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: #ffffff !important;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.smf-logo-img,
+.smf-checkout-box img.smf-logo-img,
+.payment_box.payment_method_smart_myfatoorah img.smf-logo-img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: 28px !important;
+    max-width: 118px !important;
+    max-height: 36px !important;
+    object-fit: contain !important;
+    object-position: center;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.smf-logo-badge--card .smf-logo-img,
+.smf-logo-badge--qpay .smf-logo-img {
+    height: 26px !important;
+    max-width: 132px !important;
+}
+
+.smf-logo-badge--apple_pay .smf-logo-img,
+.smf-logo-badge--google_pay .smf-logo-img {
+    height: 24px !important;
+    max-width: 108px !important;
+}
+
+.smf-checkout-box--logos .smf-routes {
+    display: grid;
+    gap: 10px;
+}
+
+.smf-checkout-box--logos .smf-route-option--logo {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 8px;
+    min-height: 104px;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Compact logo tiles */
+.smf-checkout-box--logos.smf-logo-layout-compact .smf-route-option--logo {
+    min-height: 84px;
+    padding: 8px;
+    gap: 4px;
+}
+
+.smf-checkout-box--logos.smf-logo-layout-compact .smf-logo-badge {
+    min-height: 36px;
+    padding: 6px 8px;
+}
+
+.smf-checkout-box--logos.smf-logo-layout-compact .smf-logo-caption {
+    font-size: 11px;
+}
+
+.smf-checkout-box--logos.smf-logo-layout-compact .smf-logo-help {
+    display: none;
+}
+
+/* Minimal logo-first */
+.smf-checkout-box--logos.smf-logo-layout-minimal .smf-route-option--logo {
+    min-height: 72px;
+    padding: 8px;
+    background: transparent;
+    box-shadow: none;
+}
+
+.smf-checkout-box--logos.smf-logo-layout-minimal .smf-route-option--logo.is-selected,
+.smf-checkout-box--logos.smf-logo-layout-minimal .smf-route-option--logo:has(input:checked) {
+    background: var(--smf-bg-selected);
+}
+
+.smf-checkout-box--logos.smf-logo-layout-minimal .smf-logo-caption {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--smf-muted);
+}
+
+.smf-checkout-box--logos.smf-logo-layout-minimal .smf-logo-help,
+.smf-checkout-box--logos.smf-logo-layout-minimal .smf-pill {
+    display: none;
+}
+
+.smf-checkout-box--logos.smf-logo-layout-minimal .smf-logo-badge {
+    background: #fff;
+    border: 0;
+    box-shadow: none;
+    min-height: 40px;
+}
+
+.smf-checkout-box--logos .smf-route-option--logo .smf-radio-wrap {
+    margin: 0 auto !important;
+}
+
+.smf-checkout-box--logos .smf-route-content--logo {
+    align-items: center;
+    gap: 6px;
+}
+
+.smf-checkout-box--logos .smf-logo-row {
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.smf-checkout-box--logos .smf-logo-badge {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 10px;
+}
+
+.smf-checkout-box--logos .smf-logo-img {
+    margin-inline: auto;
+}
+
+.smf-logo-caption {
+    display: block;
+    color: var(--smf-text);
+    font-size: 12px;
+    font-weight: var(--smf-title-weight, 700);
+    line-height: 1.35;
+}
+
+.smf-checkout-box--logos .smf-logo-caption {
+    margin-top: 2px;
+}
+
+.smf-checkout-box--logos .smf-logo-help {
+    display: none;
+}
+
+.smf-blocks-box {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.smf-block-route-option {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* WooCommerce Blocks payment method content inherits theme text — force contrast */
+.wc-block-components-radio-control-accordion-content .smf-checkout-box,
+.wc-block-checkout__payment-method .smf-checkout-box {
+    color: var(--smf-text);
+}
+
+.smf-embedded-wrap {
+    margin-top: 16px;
+    padding: 16px 16px 14px;
+    border: 1px solid var(--smf-border);
+    border-radius: var(--smf-radius-sm, 12px);
+    background: var(--smf-bg-soft, #f4f6f8);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.smf-embedded-title {
+    margin: 0 0 12px;
+    padding: 0;
+    color: var(--smf-text);
+    font-size: 1rem;
+    font-weight: var(--smf-title-weight, 650);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.smf-embedded-hint,
+.smf-embedded-fallback {
+    margin: 0 0 10px;
+    color: var(--smf-muted);
+    font-size: 0.92rem;
+    line-height: 1.45;
+}
+
+.smf-embedded-fallback {
+    color: var(--smf-text);
+}
+
+.smf-cardview,
+#smf-cardview,
+#smf-cardview-blocks {
+    width: 100%;
+    max-width: 100%;
+    min-height: 190px;
+    height: auto;
+    padding: 10px;
+    border-radius: 12px;
+    background: var(--smf-bg, #ffffff);
+    border: 1px solid var(--smf-border-strong, rgba(15, 23, 42, 0.12));
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.smf-cardview iframe,
+#smf-cardview iframe,
+#smf-cardview-blocks iframe {
+    min-height: 190px !important;
+    height: 190px !important;
+    overflow: hidden !important;
+}
+
+.smf-embedded-error {
+    margin: 0;
+    color: #dc2626;
+}
+
+@media (max-width: 640px) {
+    .smf-checkout-box.smf-cols-3 .smf-routes,
+    .smf-checkout-box.smf-cols-4 .smf-routes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .smf-checkout-box {
+        padding: 14px;
+    }
+
+    .smf-route-option {
+        padding: 11px 12px;
+    }
+
+    .smf-checkout-box--logos .smf-routes,
+    .smf-checkout-box--text.smf-text-layout-grid .smf-routes {
+        gap: 8px;
+    }
+
+    .smf-checkout-box.smf-cols-4 .smf-routes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .smf-checkout-box--logos .smf-route-option--logo {
+        min-height: 80px;
+        padding: 10px;
+    }
+
+    .smf-logo-img {
+        height: 22px;
+        max-width: 96px;
+    }
+
+    .smf-logo-badge--card .smf-logo-img,
+    .smf-logo-badge--qpay .smf-logo-img {
+        height: 20px;
+        max-width: 108px;
+    }
+}
