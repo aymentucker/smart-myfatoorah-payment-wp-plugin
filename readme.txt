@@ -9,19 +9,31 @@ Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Smart MyFatoorah payment routing for WooCommerce: regional local methods by country, Visa/Mastercard, optional wallets, signed webhooks, and reconciliation.
+Smart MyFatoorah payment routing for WooCommerce: regional local methods by country, Visa/Mastercard, optional wallets, signed webhooks, and reconciliation. Built on MyFatoorah APIs — https://www.myfatoorah.com/
 
 == Description ==
 
-Smart MyFatoorah Gateway is a production-oriented WooCommerce payment gateway by [Aymen Ali](https://github.com/aymentucker) on top of the MyFatoorah APIs.
+Smart MyFatoorah Gateway is a production-oriented WooCommerce payment gateway by [Aymen Ali](https://github.com/aymentucker) on top of the [MyFatoorah](https://www.myfatoorah.com/) payment platform.
 
-It recommends the best available method for the customer’s country when that method is enabled on the merchant account, without collecting raw card data in WordPress.
+It recommends the best available **local method** for the customer’s country when that method is enabled on the merchant account, without collecting raw card data in WordPress.
+
+MyFatoorah enables online payments across 8 MENA markets (Kuwait, Saudi Arabia, UAE, Qatar, Bahrain, Oman, Egypt & Jordan). Learn more: [myfatoorah.com](https://www.myfatoorah.com/) · Developer docs: [docs.myfatoorah.com](https://docs.myfatoorah.com/docs/get-started)
+
+= Supported methods =
+
+* **QPay** (Qatar)
+* **KNET** (Kuwait)
+* **Benefit** (Bahrain)
+* **Mada** / **STC Pay** (Saudi Arabia)
+* **Meeza** (Egypt)
+* **Visa / Mastercard** (international & general card checkout)
+* **Apple Pay** / **Google Pay** (optional, when enabled on the MyFatoorah account)
+
+Logos for checkout live under `assets/images/` in the plugin package. On GitHub, see the project [README.md](https://github.com/aymentucker/smart-myfatoorah-gateway/blob/master/README.md) for a visual method table.
 
 = Highlights =
 
-* Country-aware routing for local methods when MyFatoorah enables them: QPay (QA), KNET (KW), Benefit (BH), Mada / STC Pay (SA), Meeza (EG).
-* Visa / Mastercard for international and general card checkout.
-* Optional Apple Pay and Google Pay when enabled on the MyFatoorah account.
+* Country-aware routing for local methods when MyFatoorah enables them.
 * Classic Checkout and WooCommerce Checkout Blocks.
 * High-Performance Order Storage (HPOS) compatibility declared.
 * Signed MyFatoorah Webhook V2 on `/?wc-api=myfatoorah_webhook` (compatible with the official plugin URL).
@@ -40,6 +52,14 @@ It recommends the best available method for the customer’s country when that m
 * Amount, currency, and order reference checks run before `payment_complete()`.
 * Live mode requires HTTPS on the site.
 
+= Useful links =
+
+* MyFatoorah: https://www.myfatoorah.com/
+* API & developer docs: https://docs.myfatoorah.com/docs/get-started
+* API reference: https://docs.myfatoorah.com/reference
+* API-based services: https://www.myfatoorah.com/en/api-based-services/
+* Author (GitHub): https://github.com/aymentucker
+
 == Payment API design ==
 
 * **Local methods (QPay, KNET, Benefit, Mada, STC Pay, Meeza):** MyFatoorah V2 `InitiatePayment` → discover `PaymentMethodId` → `ExecutePayment`.
@@ -56,7 +76,7 @@ Deactivate the official MyFatoorah WooCommerce plugin when using Smart, so only 
 2. Upload and activate the plugin.
 3. Open **WooCommerce → Settings → Payments → Smart MyFatoorah**.
 4. Keep **Test mode** on; set **Merchant country** to your MyFatoorah account country.
-5. Paste the API token and save.
+5. Paste the API token (see MyFatoorah Integration Settings → API Key) and save.
 6. Click **Test MyFatoorah connection** and review discovered methods.
 7. In MyFatoorah Portal → Integration Settings → Webhook Settings (V2):
    * Endpoint: `https://YOUR-DOMAIN.com/?wc-api=myfatoorah_webhook`
@@ -65,7 +85,8 @@ Deactivate the official MyFatoorah WooCommerce plugin when using Smart, so only 
 8. Optionally register the Apple Pay domain after placing the Apple association file under `/.well-known/`.
 9. Complete sandbox tests before switching to Live.
 
-Full setup guide: `MYFATOORAH-SETUP.md` in the plugin folder.
+Full setup guide: `MYFATOORAH-SETUP.md` in the plugin folder.  
+GitHub overview with logos: `README.md`.
 
 == Frequently Asked Questions ==
 
@@ -81,6 +102,10 @@ Confirm Webhook V2 delivery to `/?wc-api=myfatoorah_webhook`, the webhook secret
 
 Domain registration uses the same MyFatoorah API. Checkout uses **hosted** Apple Pay (V3 redirect), not the official embedded `applepay.js` session on the page.
 
+= Where do I get an API token? =
+
+From the MyFatoorah portal: Integration Settings → API Key. Official guide: https://docs.myfatoorah.com/docs/api-key
+
 == Troubleshooting ==
 
 * **Connection test shows no locals:** ask MyFatoorah to enable the regional method on the account, or confirm merchant country / token environment (Demo vs Live).
@@ -93,6 +118,7 @@ Domain registration uses the same MyFatoorah API. Checkout uses **hosted** Apple
 = 1.0.8 =
 * Tabbed gateway settings (Settings / About / How to use).
 * Documentation refresh for GCC locals, webhooks, and go-live.
+* GitHub README with payment logos and MyFatoorah resource links.
 
 = 1.0.7 =
 * Automatic checkout description based on enabled methods.
@@ -123,4 +149,8 @@ Recommended update: clearer admin UX and documentation aligned with regional met
 
 == External services ==
 
-This plugin connects to MyFatoorah APIs (Demo or Live regional endpoints) to create payments, inquire status, process refunds, and register Apple Pay domains. See https://myfatoorah.com/ and your MyFatoorah merchant agreement for terms and privacy.
+This plugin connects to MyFatoorah APIs (Demo or Live regional endpoints) to create payments, inquire status, process refunds, and register Apple Pay domains.
+
+* Website: https://www.myfatoorah.com/
+* Documentation: https://docs.myfatoorah.com/docs/get-started
+* Privacy / terms: see your MyFatoorah merchant agreement and https://www.myfatoorah.com/
